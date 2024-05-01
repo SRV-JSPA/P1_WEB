@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-import { Api } from "../Api";
 import axios from '../axiosConfig'
 
 function EliminarPost() {
