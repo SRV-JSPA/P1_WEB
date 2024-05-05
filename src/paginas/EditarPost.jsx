@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from '../axiosConfig'
 import ReactQuill from "react-quill";
@@ -43,7 +43,7 @@ function EditarPost() {
   const [imagen, setImagen] = useState("");
   const [error, setError] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async () => {
     if (!titulo || !contenido || !carro || !marca || !imagen) {
       setError("Por favor completa todos los campos.");
       return;

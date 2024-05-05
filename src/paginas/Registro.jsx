@@ -11,7 +11,7 @@ function Registro (){
 
  
 
-  const submithandler = async (e) => {
+  const submithandler = async () => {
     
     if(!usuario || !contraseña ) {
       setError("Todos los campos son obligatorios")

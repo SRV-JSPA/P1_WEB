@@ -41,7 +41,7 @@ function CrearPost() {
     "image",
   ];
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async () => {
     
     if (!titulo || !contenido || !carro || !marca || !imagen) {
       setError("Por favor completa todos los campos.");

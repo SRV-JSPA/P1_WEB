@@ -1,13 +1,13 @@
-import React from "react";
+
 import { Link, useParams } from "react-router-dom";
 import axios from '../axiosConfig'
 
 function EliminarPost() {
   const { id } = useParams();
 
-  const Ehandler = async (e) => {
+  const Ehandler = async () => {
     try {
-     const response = await axios.delete(`http://localhost:3000/posts/${id}`);
+      await axios.delete(`http://localhost:3000/posts/${id}`);
       console.log("Se elimino la publicación correctamente")
     } catch (error) {
       console.error('Error de red:', error);

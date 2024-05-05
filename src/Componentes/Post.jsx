@@ -1,4 +1,4 @@
-import React from "react";
+
 import PropTypes from "prop-types";
 import carro from "../images/carro.webp";
 import { Link } from "react-router-dom";
