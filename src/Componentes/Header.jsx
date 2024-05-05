@@ -9,14 +9,6 @@ function Header() {
     window.innerWidth > 800 ? true : false
   );
 
-
-
-    if (window.innerWidth < 800) {
-      setResNav(false);
-    } else {
-      setResNav(true);
-    }
-
   const logoutHandler = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('isLoggedIn');
