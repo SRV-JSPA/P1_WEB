@@ -11,8 +11,8 @@ function Registro (){
 
  
 
-  const submithandler = async () => {
-    
+  const submithandler = async (e) => {
+    e.preventDefault();
     if(!usuario || !contraseña ) {
       setError("Todos los campos son obligatorios")
       return;
@@ -26,9 +26,11 @@ function Registro (){
 
     try {
       const res = await axios.post('http://localhost:3000/users', data)
-      console.log(res);
+      if(res.status === 200){
+        window.location.href = '/posts/admin'
+      }
     } catch (error) {
-      console.log(error);
+      setError(error.response.data.message);
     }
   }
   
@@ -41,7 +43,7 @@ function Registro (){
         {error && <p className='mensaje-error_form'>{error}</p>}
           <input type='text' placeholder='Su usuario' name='user' value={usuario.user} onChange={(e) => setUsuario(e.target.value)} autoFocus/>
           <input type='password' placeholder='Su contraseña' name='contra' value={usuario.contra} onChange={(e) => setContraseña(e.target.value)} />
-          <Link to='/posts/admin' type='submit'  className='btn verde'  onClick={submithandler} >Registrar</Link>
+          <button type='submit'  className='btn verde'  onClick={submithandler} >Registrar</button>
         </form>
       <small>Ya tiene una cuenta? <Link to='/posts/admin' >sign in</Link></small>
       </div>
