@@ -57,7 +57,7 @@ function EditarPost() {
       imagen: imagen
     };
     try {
-      const res = await axios.put(`http://62.138.24.147/lab6/22318/posts/${id}`, data);
+      const res = await axios.put(`http://localhost:22318/posts/${id}`, data);
         console.log(res);
     } catch (error) {
       console.log(error);
@@ -68,7 +68,7 @@ function EditarPost() {
 
   const res = async () => {
     try {
-      const response = await axios.get(`http://62.138.24.147/lab6/22318/posts/${id}`, {
+      const response = await axios.get(`http://localhost:22318/posts/${id}`, {
         headers: {
           
           mensaje: 'desde editar2'

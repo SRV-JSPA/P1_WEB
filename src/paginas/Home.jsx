@@ -9,7 +9,7 @@ function Home() {
 
   const datos = async () => {
     try {
-      const postsD = await axios.get('http://62.138.24.147/lab6/22318/posts')
+      const postsD = await axios.get('http://localhost:22318/posts')
         setPosts(postsD.data);
     } catch (error) {
       localStorage.removeItem('token')
