@@ -57,7 +57,7 @@ function CrearPost() {
       imagen: imagen
     };
     try {
-       await axios.post("http://localhost:3000/posts", data);
+       await axios.post("http://62.138.24.147/lab6/22318/posts", data);
     } catch (error) {
       console.log(error);
       localStorage.removeItem('token')
