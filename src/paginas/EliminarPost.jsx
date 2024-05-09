@@ -7,7 +7,7 @@ function EliminarPost() {
 
   const Ehandler = async () => {
     try {
-      await axios.delete(`http://localhost:22318/posts/${id}`);
+      await axios.delete(`http://22318.arpanetos.lol/posts/${id}`);
       console.log("Se elimino la publicación correctamente")
     } catch (error) {
       console.error('Error de red:', error);

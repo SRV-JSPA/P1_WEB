@@ -23,7 +23,7 @@ function Login (){
     }
 
     try {
-      const res = await axios.get('http://localhost:22318/users', {
+      const res = await axios.get('http://22318.arpanetos.lol/users', {
         headers: {
           user: data.user,
           password: data.password

@@ -25,7 +25,7 @@ function Registro (){
 
 
     try {
-      const res = await axios.post('http://localhost:22318/users', data)
+      const res = await axios.post('http://22318.arpanetos.lol/users', data)
       if(res.status === 200){
         window.location.href = '/posts/admin'
       }
